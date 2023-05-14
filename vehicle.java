@@ -10,6 +10,7 @@ class car extends vehicle{
 }
 class Main{
     public static void main(String args[]){
+        int a=10;
         car v1 = new car();
         v1.accelerator();
     }
