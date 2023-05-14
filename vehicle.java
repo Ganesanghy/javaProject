@@ -3,9 +3,11 @@ public class vehicle {
         System.out.println("This vehicle have accelerator");
     }
 }
+public class car extends vehicle{
+}
 class Main{
     public static void main(String args[]){
-        vehicle v = new vehicle();
-        v.accelerator();
+        car v1 = new car();
+        v1.accelerator();
     }
 }
