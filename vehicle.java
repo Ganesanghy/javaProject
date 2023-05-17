@@ -1,37 +1,32 @@
-import java.util.Scanner;
-public class vehicle {
-    int tyre = 6,head_light=2,max_gear=8;
-    public void brake(){
-        System.out.println("This vehicle has brake");
+
+
+class calculator{
+    protected int a,b,c,d;
+    calculator(int a, int b){
+        this.a = a;
+        this.b = b;
     }
-    public void clutch(){
-        System.out.println("This vehicle has clutch");
+    int add(){
+        return a+b;
     }
-    public void accelerator(){
-        System.out.println("This vehicle has accelerator");
+    float add(float a, float b){
+        return a+b;
     }
-    public void gear(){
-        System.out.println("This vehicle has maximum gear"+max_gear);
-    }
-}
-class car extends vehicle{
-    int tyre = 4,max_gear=6;
-    int newcar(String color,String model_no, String car_name){
-        return 1;
+    float add(int a, float b, int c, int d){
+        return a+b+c+d;
     }
 }
 
-class Main{
-    public static void main(String args[]){
-        Scanner obj = new Scanner(System.in);
-        System.out.println("Enter car color: ");
-        String color =obj.nextLine();
-        System.out.println("Enter car model_no: ");
-        String model_no = obj.nextLine();
-        System.out.println("Enter car name: ");
-        String car_name = obj.nextLine();
-        car BMW = new car();
-        int result = BMW.newcar(color,model_no,car_name);
-        System.out.println(result);
+
+
+
+public class vehicle{
+    public static void main(String[] args) {
+        calculator c = new calculator(4,4);
+        c.add();
+        c.a =5;
+        System.out.println(c.add(4.0f,2.0f));
+        System.out.println(c.add(34.2f,23.f));
+        System.out.println(c.add(23,2.0f,2,2));
     }
 }
